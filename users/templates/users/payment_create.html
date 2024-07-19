@@ -1,0 +1,17 @@
+{% extends 'content/base.html' %}
+{% block content %}
+<div class="container d-flex justify-content-center">
+    <div class = "text-center">
+        <div class="card">
+            <div class="card-body">
+                {% if user.is_premium %}
+                     <h2> У вас уже есть premium подписка</h2>
+                {% else %}
+                    <h2>Пользователи с premium подпиской могут добавлять и просматривать платные публикации</h2>
+                    <a href="{{ link }}" class="btn btn-outline-primary">Перейти к оплате</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
