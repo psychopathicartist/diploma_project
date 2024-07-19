@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "diploma-project"
+version = "0.1.0"
+description = ""
+authors = ["psychopathicartist"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.1"
+psycopg2-binary = "^2.9.9"
+pillow = "^10.4.0"
+django-phonenumbers = "^1.0.1"
+django-phonenumber-field = "^8.0.0"
+stripe = "^10.3.0"
+smsaero-api = "^3.0.0"
+django = "^4.2"
+flake8 = "^7.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
