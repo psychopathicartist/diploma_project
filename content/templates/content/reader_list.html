@@ -1,0 +1,25 @@
+{% extends 'content/base.html' %}
+{% load mymedia %}
+{% block content %}
+    <div class="container">
+        <div class="row text-center">
+            {% for object in object_list %}
+            <div class="col-4">
+                <div class="card mb-4 box-shadow my-3" style="height: 350px;">
+                    <div class="card-header">
+                        <img src="{% mymedia object.image %}" alt="object.name" width="240" height="160">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="my-0 font-weight-normal">{{ object.heading }}</h4>
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group">
+                            <a href="{% url 'content:view' object.pk %}" class="btn btn-outline-primary mr-1">Просмотр</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
