@@ -1,0 +1,39 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-5 bg-white border-bottom box-shadow">
+    <nav class="navbar navbar-expand-md navbar-info fixed-top bg-info">
+        <h3 class="text-light">Меню |</h3>
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{% url 'content:main' %}"> Главная </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{% url 'content:reader_list' %}"> Публикации </a>
+                </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{% url 'content:list' %}">Мои публикации</a>
+                    </li>
+                 {% endif %}
+            </ul>
+            <div class="d-flex flex-row-reverse">
+                <ul class="navbar-nav mr-auto">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="{% url 'users:profile' %}">Профиль</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="{% url 'users:logout' %}">Выйти</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="{% url 'users:login' %}">Вход</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="{% url 'users:register' %}">Регистрация</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
