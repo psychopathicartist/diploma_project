@@ -1,0 +1,123 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$6dW6FoUJdDUzXmg5mToRw7$VccE5PRrqcREdff54QGuvZlNGXENnmu8feEeDVTdbHQ=",
+      "last_login": "2024-07-19T23:53:36Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "date_joined": "2024-07-19T16:43:22Z",
+      "phone": "+78008888888",
+      "nick_name": "superuser",
+      "town": null,
+      "is_premium": true,
+      "is_active": true,
+      "token": null,
+      "payment_session_id": null,
+      "groups": [],
+      "user_permissions": [
+        22,
+        23,
+        24,
+        27,
+        28
+      ]
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$2811cowH2LghDz1wkigUbG$33/EAFOKUTaF/qVWjSaIc4jO+sFI4aZmiYRHABdlzHg=",
+      "last_login": "2024-07-19T20:01:00.925Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2024-07-19T18:30:19.054Z",
+      "phone": "+79179003581",
+      "nick_name": "orlova_maria",
+      "town": "Казань",
+      "is_premium": true,
+      "is_active": true,
+      "token": "673207",
+      "payment_session_id": "cs_test_a1H8opsFdl0eTrYYbs1VaK2gPHsNp48UHT9Beq5fm7dYZvqNcOXi1D8jjw",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$Fdu9YAw2UUoN8HZEx34XZ8$Xr94JS7Y7LVe0Qk+i8KrKXyU7OZAj8XI6BMOueK6+4U=",
+      "last_login": "2024-07-19T20:31:36.209Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2024-07-19T18:40:37.084Z",
+      "phone": "+79393742169",
+      "nick_name": "mary",
+      "town": null,
+      "is_premium": false,
+      "is_active": true,
+      "token": "287006",
+      "payment_session_id": "cs_test_a1JChGlbzfphd8EgJuveKKbj4mh9JuoFGv7UcYi8SCGFWzRwEjFWcydwrV",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 16,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$sYLtgs2dQGpGL1H4dQiSRu$f7AOIlZ7odSSxilSRH0bzuF2j2RS0OcglBxwhOVOTDs=",
+      "last_login": "2024-07-19T18:56:31.082Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2024-07-19T18:55:37.425Z",
+      "phone": "+79534900545",
+      "nick_name": "vladislav",
+      "town": null,
+      "is_premium": false,
+      "is_active": true,
+      "token": "825539",
+      "payment_session_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 17,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$7mODBoxVGOTZRrk85t6Jhn$dJntoIlri48hPoXrbZy5uzEikUhCGjqO9pPuN7cm7rk=",
+      "last_login": "2024-07-19T19:12:03.144Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "date_joined": "2024-07-19T19:03:31.755Z",
+      "phone": "+79969494523",
+      "nick_name": "ilya",
+      "town": null,
+      "is_premium": false,
+      "is_active": true,
+      "token": "168237",
+      "payment_session_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
