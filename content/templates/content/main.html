@@ -1,0 +1,61 @@
+{% extends 'content/base.html' %}
+{% load mymedia %}
+{% block content %}
+  <div class="album py-5 bg-light">
+      <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 g-2">
+              <div class="col">
+                  <div class="card shadow-sm">
+                      <img src="/static/images/reader.jpg" class="rounded float img-fluid" alt="Reader">
+                      <div class="card-body">
+                          <div class="d-flex justify-content-between align-items-center">
+                              <a href="{% url 'content:reader_list' %}" class="btn btn-outline-primary">К списку публикаций</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card shadow-sm">
+                      <img src="/static/images/writer.jpg" class="rounded float img-fluid" alt="Writer">
+                      <div class="card-body">
+                          <div class="d-flex justify-content-between align-items-center">
+                              <a href="{% url 'content:create' %}" class="btn btn-outline-primary">Создать публикацию</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="card mb-3 box-shadow my-3"">
+              <img class="card-img-top" src="/static/images/premium.jpg" class="rounded float img-fluid" alt="Premium">
+              <div class="card-body">
+                  <a href="{% url 'users:payment_create' %}" class="btn btn-outline-warning">Получить Premium</a>
+              </div>
+          </div>
+          <div class="card mb-4 box-shadow my-3">
+              <div class="card-header text-center">
+                  <h3>Статистика публикаций сайта</h3>
+              </div>
+              <div class="card-body">
+                  <div class="row text-center ">
+                      <div class="col-12">
+                          <table class="table">
+                              <tr>
+                                  <th><p>Количество публикаций</p></th>
+                                  <th><p>Количество premium публикаций</p></th>
+                                  <th><p>Количество пользователей</p></th>
+                                  <th><p>Количество пользователей с подпиской</p></th>
+                              </tr>
+                              <tr>
+                                  <td><p>{{ total_content }}</p></td>
+                                  <td><p>{{ premium_content }}</p></td>
+                                  <td><p>{{ all_users }}</p></td>
+                                  <td><p>{{ premium_user }}</p></td>
+                              </tr>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+{% endblock %}

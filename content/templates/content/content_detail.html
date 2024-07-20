@@ -1,0 +1,31 @@
+{% extends 'content/base.html' %}
+{% load mymedia %}
+{% block content %}
+    {% if object.author == user %}
+        <div class="col-12">
+            <a href="{% url 'content:list' %}" class="btn btn-outline-primary">К моим публикациям</a>
+        </div>
+    {% else %}
+        <div class="col-12">
+            <a href="{% url 'content:reader_list' %}" class="btn btn-outline-primary">К публикациям</a>
+        </div>
+    {% endif %}
+    <div class="container d-flex justify-content-center">
+        <div class = "text-center">
+            <div class="card mb-4 box-shadow" style="max-width: 36rem;">
+                <div class="card-header">
+                    <img src="{% mymedia object.image %}" alt="object.name" width="340" height="240">
+                </div>
+                <div class="card-body">
+                    <h2>{{ object.heading }}</h2>
+                    <h5>{{ object.description }}</h5>
+                </div>
+                <div class="card-footer">
+                    <h5>Просмотров {{ object.views_count }}</h5>
+                    <h5>Автор: {{ object.author}}</h5>
+                    <p>Дата создания {{ object.created_at }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
