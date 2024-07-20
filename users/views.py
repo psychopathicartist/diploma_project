@@ -29,8 +29,6 @@ class RegisterView(CreateView):
     def form_valid(self, form):
         self.object = form.save()
         phone = int(self.object.phone.as_e164[1:])
-        print(type(phone))
-        print(phone)
         token = ''.join(random.choice(string.digits) for i in range(6))
         self.object.token = token
         self.object.save()
@@ -118,8 +116,9 @@ def generate_new_password(request):
     user = request.user
     characters = string.ascii_letters + string.digits
     new_password = ''.join(random.choice(characters) for i in range(12))
+    phone = int(user.phone.as_e164[1:])
     try:
-        send_sms(phone=user.phone, message=f'Новый пароль {new_password}')
+        send_sms(phone=phone, message=f'Новый пароль {new_password}')
     except SmsAeroException as e:
         print(f"An error occurred: {e}")
     request.user.set_password(new_password)
