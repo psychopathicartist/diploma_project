@@ -10,7 +10,9 @@ def send_sms(phone: int, message: str):
     Формирование отправки SMS-сообщения
     """
 
-    email = settings.SMSAERO_EMAIL[0]
+    email = settings.SMSAERO_EMAIL
+    if isinstance(email, tuple):
+        email = email[0]
     key = settings.SMSAERO_API_KEY
     api = SmsAero(email, key)
     return api.send_sms(phone, message)
